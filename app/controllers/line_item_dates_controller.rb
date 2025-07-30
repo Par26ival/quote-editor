@@ -19,6 +19,10 @@ class LineItemDatesController < ApplicationController
     end
   end
 
+  def show
+    @line_item_dates = @quote.line_item_dates.includes(:line_items).ordered
+  end
+
   def edit
   end
 
