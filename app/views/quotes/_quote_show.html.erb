@@ -1,0 +1,14 @@
+<div class="quote-details"> 
+    <h2><%= quote.name %></h2> 
+    <% quote.line_item_dates.ordered.each do |date| %> 
+        <div>
+            <strong><%= date.date %></strong> 
+            <div class="line-items"> 
+                <% date.line_items.each do |item| %> 
+                    <div><%= item.name %>: <%= item.description %></div> 
+                <% end %>
+            </div> 
+        </div>
+    <% end %> 
+    <%= link_to "Back to quotes", quotes_path, data: { turbo_frame: "quote_show" } %> 
+</div>

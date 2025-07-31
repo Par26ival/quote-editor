@@ -2,7 +2,7 @@
   <div class="quote">
     <%= link_to quote.name,
                 quote_path(quote),
-                data: { turbo_frame: "_top" } %>
+                data: { turbo_frame: "quote_show" } %>
     <div class="quote__actions">
       <%= button_to "Delete",
                     quote_path(quote),
